@@ -1,0 +1,33 @@
+{
+    "name": "hesammousavi/laravel-module-creator",
+    "description": "a tool for build your laravel modules",
+    "license": "MIT",
+    "homepage": "https://github.com/Hesammousavi/laravel-module-creator",
+    "authors": [
+        {
+            "name": "Hesam Mousavi",
+            "email": "hesammoousavi@gmail.com"
+        }
+    ],
+    "keywords": ["Laravel Module" , "Laravel" , "Module Creator"],
+    "autoload": {
+        "psr-4": {
+            "Hesammousavi\\LaravelModuleCreator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hesammousavi\\LaravelModuleCreator\\LaravelModuleCreatorServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "illuminate/support": "^9.0",
+        "illuminate/console": "^9.0",
+        "illuminate/filesystem": "^9.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
+}
