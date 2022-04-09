@@ -1,0 +1,15 @@
+{
+  "name": "{{ moduleName }}",
+  "autoload": {
+    "psr-4": {
+      "{{ moduleNamespace }}\\" : "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "{{ moduleNamespace }}\\Providers\\BaseServiceProvider"
+      ]
+    }
+  }
+}

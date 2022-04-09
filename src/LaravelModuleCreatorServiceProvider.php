@@ -1,13 +1,15 @@
 <?php namespace Hesammousavi\LaravelModuleCreator;
 
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModule;
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModuleController;
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModuleGraphqlMutation;
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModuleGraphqlQuery;
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModuleGraphqlType;
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModuleMigration;
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModuleModel;
-use Hesammousavi\LaravelModuleCreator\Console\Commands\MakeModuleSeeder;
+
+use Hesammousavi\LaravelModuleCreator\Commands\Custom\MakeModuleRepo;
+use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlMutation;
+use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlQuery;
+use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlType;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleController;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleMigration;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleModel;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleSeeder;
+use Hesammousavi\LaravelModuleCreator\Commands\MakeModule;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelModuleCreatorServiceProvider extends  ServiceProvider
@@ -19,16 +21,24 @@ class LaravelModuleCreatorServiceProvider extends  ServiceProvider
 
     public function registerCommands()
     {
-        $this->commands([
+        $commands = [
             MakeModule::class,
             MakeModuleMigration::class,
             MakeModuleModel::class,
             MakeModuleSeeder::class,
             MakeModuleController::class,
-            MakeModuleGraphqlType::class,
-            MakeModuleGraphqlMutation::class,
-            MakeModuleGraphqlQuery::class
-        ]);
+            MakeModuleRepo::class
+        ];
+
+        if(class_exists("Rebing\GraphQL\Support\Facades\GraphQL")) {
+            $commands = array_merge($commands, [
+                MakeModuleGraphqlType::class,
+                MakeModuleGraphqlMutation::class,
+                MakeModuleGraphqlQuery::class
+            ]);
+        }
+
+        $this->commands($commands);
     }
 
 }

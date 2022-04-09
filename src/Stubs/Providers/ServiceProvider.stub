@@ -1,0 +1,16 @@
+<?php namespace {{ namespace }};
+
+class {{ class }} extends \Illuminate\Support\ServiceProvider
+{
+
+    public function register()
+    {
+         $this->loadMigrationsFrom(__DIR__."/../Database/Migrations");
+         $this->loadRoutesFrom(__DIR__.'/../Routes/routes.php');
+    }
+
+    public function boot()
+    {
+
+    }
+}
