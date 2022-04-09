@@ -38,8 +38,8 @@ class MakeModuleSeeder extends SeederMakeCommand
      *
      * @var string
      */
-    protected $description = 'Create a new Eloquent model class for module';
-    
+    protected $description = 'Create a new Seeder class for module';
+
     /**
      * Get the destination class path.
      *
