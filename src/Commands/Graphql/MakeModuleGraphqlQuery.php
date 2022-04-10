@@ -61,6 +61,6 @@ class MakeModuleGraphqlQuery extends GeneratorCommand
 
     protected function getStub()
     {
-        return __DIR__ . '/../Stubs/Graphql/query.stub';
+        return __DIR__ . '/../../Stubs/Graphql/query.stub';
     }
 }

@@ -12,7 +12,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class MakeModuleGraphqlType extends GeneratorCommand
 {
     use RequireModule , GraphqlCommand;
-    
+
     /**
      * The console command name.
      *
@@ -38,7 +38,7 @@ class MakeModuleGraphqlType extends GeneratorCommand
      * @var string
      */
     protected $description = 'Create a new Graphql Type class for the module';
-    
+
     /**
      * Get the destination class path.
      *
@@ -60,6 +60,6 @@ class MakeModuleGraphqlType extends GeneratorCommand
 
     protected function getStub()
     {
-        return __DIR__ . '/../Stubs/Graphql/type.stub';
+        return __DIR__ . '/../../Stubs/Graphql/type.stub';
     }
 }

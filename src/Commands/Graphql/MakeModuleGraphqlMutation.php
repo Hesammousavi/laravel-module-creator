@@ -60,6 +60,6 @@ class MakeModuleGraphqlMutation extends GeneratorCommand
 
     protected function getStub()
     {
-        return __DIR__ . '/../Stubs/Graphql/mutation.stub';
+        return __DIR__ . '/../../Stubs/Graphql/mutation.stub';
     }
 }
