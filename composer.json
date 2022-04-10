@@ -26,6 +26,7 @@
         "illuminate/support": "^9.0"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.5"
     }
 }
