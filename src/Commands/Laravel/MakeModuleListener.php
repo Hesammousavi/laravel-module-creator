@@ -57,7 +57,7 @@ class MakeModuleListener extends ListenerMakeCommand
 
     protected function rootNamespace()
     {
-        return str_replace('/', '\\', $this->argument('module')) . '\Listeners';
+        return str_replace('/', '\\', $this->argument('module'));
     }
 
     /**

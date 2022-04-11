@@ -57,7 +57,7 @@ class MakeModuleEvent extends EventMakeCommand
 
     protected function rootNamespace()
     {
-        return str_replace('/', '\\', $this->argument('module')) . '\Events';
+        return str_replace('/', '\\', $this->argument('module'));
     }
 
     /**

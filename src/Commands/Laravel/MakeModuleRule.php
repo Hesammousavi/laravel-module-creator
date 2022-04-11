@@ -53,7 +53,7 @@ class MakeModuleRule extends RuleMakeCommand
 
     protected function rootNamespace()
     {
-        return str_replace('/', '\\', $this->argument('module')) . '\Rules';
+        return str_replace('/', '\\', $this->argument('module'));
     }
 
     /**
