@@ -51,7 +51,7 @@ class MakeModuleEvent extends EventMakeCommand
     {
         $name = Str::replaceFirst($this->rootNamespace(), '', $name);
 
-        return base_path("modules/{$this->argument('module')}/src/Events") . '/' . str_replace('\\', '/', $name) . '.php';
+        return base_path("modules/{$this->argument('module')}/src") . '/' . str_replace('\\', '/', $name) . '.php';
     }
 
 
