@@ -18,20 +18,6 @@ first you must create your module
 php artisan module:make Roocket/User
 ```
 
-second add these code to your root composer.json
-
-```
-    "require": {
-       "roocket/user": "dev-main",
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "modules/Roocket/User"
-        },
-    ]
-```
-
 finally, run this code :
 
 ```
@@ -61,7 +47,9 @@ you can see these commands for your usage
   module:make:model             Create a new Eloquent model class for module
   module:make:repo              Create a new repo class for the module
   module:make:seeder            Create a new Seeder class for module
-
+  module:make:rule              Create a new Rule Validation class for module
+  module:make:event             Create a new Event class for the module
+  module:make:listener            Create a new Listener class for module
 ```
 
 
