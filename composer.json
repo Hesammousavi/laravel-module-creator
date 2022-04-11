@@ -10,6 +10,9 @@
         }
     ],
     "keywords": ["Laravel Module" , "Laravel" , "Module Creator"],
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
     "autoload": {
         "psr-4": {
             "Hesammousavi\\LaravelModuleCreator\\": "src/"
