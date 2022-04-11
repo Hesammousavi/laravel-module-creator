@@ -47,13 +47,13 @@ class MakeModuleRule extends RuleMakeCommand
     {
         $name = Str::replaceFirst($this->rootNamespace(), '', $name);
 
-        return base_path("modules/{$this->argument('module')}/src/Rules") . '/' . str_replace('\\', '/', $name) . '.php';
+        return base_path("modules/{$this->argument('module')}/src") . '/' . str_replace('\\', '/', $name) . '.php';
     }
 
 
     protected function rootNamespace()
     {
-        return str_replace('/', '\\', $this->argument('module')) . '\Rules';
+        return str_replace('/', '\\', $this->argument('module'));
     }
 
     /**

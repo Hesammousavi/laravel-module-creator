@@ -57,7 +57,7 @@ class MakeModuleController extends ControllerMakeCommand
 
     protected function rootNamespace()
     {
-        return str_replace('/', '\\', $this->argument('module')) . '\Http\Controllers';
+        return str_replace('/', '\\', $this->argument('module'));
     }
 
     /**
