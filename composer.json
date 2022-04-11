@@ -31,7 +31,8 @@
         }
     },
     "require": {
-        "illuminate/support": "^9.0"
+        "illuminate/support": "^9.0",
+        "ext-json": "*"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
