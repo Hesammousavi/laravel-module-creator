@@ -3,6 +3,7 @@
 namespace Hesammousavi\LaravelModuleCreator\Commands;
 
 use Illuminate\Console\GeneratorCommand;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
 class MakeModule extends GeneratorCommand
@@ -47,7 +48,7 @@ class MakeModule extends GeneratorCommand
                 'name' => 'composer',
                 'stub' => __DIR__ . '/../Stubs/composer.stub',
                 'rootPath' => "/",
-                'extensions' => 'json'
+                'extensions' => 'json',
             ]
         ];
 
@@ -75,7 +76,9 @@ class MakeModule extends GeneratorCommand
     {
         $stub = $this->files->get($this->getStub());
 
-        return $this->replaceNamespace($stub, $name)->replaceModuleNamesapce($stub , $name)->replaceClass($stub, $name);
+        return $this->replaceNamespace($stub, $name)
+                    ->replaceModuleNamesapce($stub , $name)
+                    ->replaceClass($stub, $name);
     }
 
 
@@ -103,15 +106,16 @@ class MakeModule extends GeneratorCommand
     protected function replaceModuleNamesapce(&$stub, $name)
     {
         $namespace = str_replace('\\' , '\\\\', $this->rootNamespace());
-        $moduleName = Str::lower(str_replace('\\', '/' , $this->rootNamespace()));
+        $namespaceName = Str::lower(str_replace('\\', '/' , $this->rootNamespace()));
+        $moduleName = Arr::last(explode('\\', $namespace));
 
         $searches = [
-            ['{{ moduleNamespace }}' , '{{ moduleName }}'] ,
-            ['{{moduleNamespace}}' , '{{moduleName}}']
+            ['{{ moduleNamespace }}' , '{{ moduleNamespaceName }}' , '{{ moduleName }}'] ,
+            ['{{moduleNamespace}}' , '{{moduleNamespaceName}}' , '{{moduleName}}']
         ];
 
         foreach ($searches as $search ) {
-            $stub = str_replace($search, [ $namespace  , $moduleName ], $stub);
+            $stub = str_replace($search, [ $namespace  , $namespaceName , $moduleName ], $stub);
         }
 
         return $this;
