@@ -7,9 +7,12 @@ use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlQuery;
 use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlType;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleController;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleEvent;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleException;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleJob;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleListener;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleMigration;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleModel;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleNotification;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleRule;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleSeeder;
 use Hesammousavi\LaravelModuleCreator\Commands\MakeModule;
@@ -33,7 +36,10 @@ class LaravelModuleCreatorServiceProvider extends  ServiceProvider
             MakeModuleRepo::class,
             MakeModuleRule::class,
             MakeModuleEvent::class,
-            MakeModuleListener::class
+            MakeModuleListener::class,
+            MakeModuleJob::class,
+            MakeModuleNotification::class,
+            MakeModuleException::class
         ];
 
         if(class_exists("Rebing\GraphQL\Support\Facades\GraphQL")) {
