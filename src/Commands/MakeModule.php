@@ -2,6 +2,7 @@
 
 namespace Hesammousavi\LaravelModuleCreator\Commands;
 
+use Hesammousavi\LaravelModuleCreator\Helpers\ModuleHandler;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -56,6 +57,8 @@ class MakeModule extends GeneratorCommand
             $this->currentFile = $meta;
             parent::handle();
         }
+
+        (new ModuleHandler($this->moduleName))->add();
     }
 
     public function getNameInput()

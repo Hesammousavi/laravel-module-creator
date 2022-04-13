@@ -10,9 +10,17 @@
         }
     ],
     "keywords": ["Laravel Module" , "Laravel" , "Module Creator"],
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
     "autoload": {
         "psr-4": {
             "Hesammousavi\\LaravelModuleCreator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "extra": {
@@ -23,9 +31,11 @@
         }
     },
     "require": {
-        "illuminate/support": "^9.0"
+        "illuminate/support": "^9.0",
+        "ext-json": "*"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.5"
     }
 }
