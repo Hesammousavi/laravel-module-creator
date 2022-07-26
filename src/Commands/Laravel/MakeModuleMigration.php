@@ -60,7 +60,7 @@ class MakeModuleMigration extends Command
 
     public function handle()
     {
-        $this->checkModuleExsits();
+        $this->checkModuleExists();
 
         // It's possible for the developer to specify the tables to modify in this
         // schema operation. The developer may also specify if this table needs
