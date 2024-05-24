@@ -7,21 +7,21 @@ use Illuminate\Database\Console\Migrations\TableGuesser;
 use Illuminate\Database\Console\Seeds\SeederMakeCommand;
 use Illuminate\Database\Migrations\MigrationCreator;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Foundation\Console\ListenerMakeCommand;
 use Illuminate\Foundation\Console\ModelMakeCommand;
-use Illuminate\Routing\Console\ControllerMakeCommand;
+use Illuminate\Foundation\Console\PolicyMakeCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputArgument;
 
-class MakeModuleController extends ControllerMakeCommand
+class MakeModulePolicy extends PolicyMakeCommand
 {
     use RequireModule;
-
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'm:make:controller';
+    protected $name = 'm:make:policy';
 
     /**
      * The name of the console command.
@@ -32,7 +32,7 @@ class MakeModuleController extends ControllerMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'm:make:controller';
+    protected static $defaultName = 'm:make:policy';
 
 
     /**
@@ -40,7 +40,7 @@ class MakeModuleController extends ControllerMakeCommand
      *
      * @var string
      */
-    protected $description = 'Create a new controller class for module';
+    protected $description = 'Create a new policy class for module';
 
     /**
      * Get the destination class path.
@@ -59,33 +59,6 @@ class MakeModuleController extends ControllerMakeCommand
     protected function rootNamespace()
     {
         return str_replace('/', '\\', $this->argument('module'));
-    }
-
-        /**
-     * Generate the form requests for the given model and classes.
-     *
-     * @param  string  $modelClass
-     * @param  string  $storeRequestClass
-     * @param  string  $updateRequestClass
-     * @return array
-     */
-    protected function generateFormRequests($modelClass, $storeRequestClass, $updateRequestClass)
-    {
-        $storeRequestClass = 'Store'.class_basename($modelClass).'Request';
-
-        $this->call('m:make:request', [
-            'module' => $this->argument('module'),
-            'name' => $storeRequestClass,
-        ]);
-
-        $updateRequestClass = 'Update'.class_basename($modelClass).'Request';
-
-        $this->call('m:make:request', [
-            'module' => $this->argument('module'),
-            'name' => $storeRequestClass,
-        ]);
-
-        return [$storeRequestClass, $updateRequestClass];
     }
 
     /**

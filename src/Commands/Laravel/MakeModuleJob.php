@@ -21,7 +21,7 @@ class MakeModuleJob extends JobMakeCommand
      *
      * @var string
      */
-    protected $name = 'module:make:job';
+    protected $name = 'm:make:job';
 
     /**
      * The name of the console command.
@@ -32,7 +32,7 @@ class MakeModuleJob extends JobMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:job';
+    protected static $defaultName = 'm:make:job';
 
 
     /**

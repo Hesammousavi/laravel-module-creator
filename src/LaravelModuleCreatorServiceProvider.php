@@ -6,6 +6,7 @@ use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlMutation
 use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlQuery;
 use Hesammousavi\LaravelModuleCreator\Commands\Graphql\MakeModuleGraphqlType;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleController;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleResource;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleEvent;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleException;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleJob;
@@ -13,6 +14,8 @@ use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleListener;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleMigration;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleModel;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleNotification;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModulePolicy;
+use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleRequest;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleRule;
 use Hesammousavi\LaravelModuleCreator\Commands\Laravel\MakeModuleSeeder;
 use Hesammousavi\LaravelModuleCreator\Commands\MakeModule;
@@ -34,6 +37,9 @@ class LaravelModuleCreatorServiceProvider extends  ServiceProvider
             MakeModuleSeeder::class,
             MakeModuleController::class,
             MakeModuleRepo::class,
+            MakeModuleResource::class,
+            MakeModuleRequest::class,
+            MakeModulePolicy::class,
             MakeModuleRule::class,
             MakeModuleEvent::class,
             MakeModuleListener::class,

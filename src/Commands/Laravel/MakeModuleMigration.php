@@ -20,8 +20,8 @@ class MakeModuleMigration extends Command
      *
      * @var string
      */
-    protected $signature = 'module:make:migration 
-        {module : The name of the module} 
+    protected $signature = 'm:make:migration
+        {module : The name of the module}
         {name : The name of the migration}
         {--create= : The table to be created}
         {--table= : The table to migrate}

@@ -3,16 +3,11 @@
 namespace Hesammousavi\LaravelModuleCreator\Commands\Laravel;
 
 use Hesammousavi\LaravelModuleCreator\Traits\RequireModule;
-use Illuminate\Database\Console\Migrations\TableGuesser;
-use Illuminate\Database\Console\Seeds\SeederMakeCommand;
-use Illuminate\Database\Migrations\MigrationCreator;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Console\ModelMakeCommand;
-use Illuminate\Routing\Console\ControllerMakeCommand;
+use Illuminate\Foundation\Console\RequestMakeCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputArgument;
 
-class MakeModuleController extends ControllerMakeCommand
+class MakeModuleRequest extends RequestMakeCommand
 {
     use RequireModule;
 
@@ -21,7 +16,7 @@ class MakeModuleController extends ControllerMakeCommand
      *
      * @var string
      */
-    protected $name = 'm:make:controller';
+    protected $name = 'm:make:request';
 
     /**
      * The name of the console command.
@@ -32,7 +27,7 @@ class MakeModuleController extends ControllerMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'm:make:controller';
+    protected static $defaultName = 'm:make:request';
 
 
     /**
@@ -40,7 +35,7 @@ class MakeModuleController extends ControllerMakeCommand
      *
      * @var string
      */
-    protected $description = 'Create a new controller class for module';
+    protected $description = 'Create a new request class for module';
 
     /**
      * Get the destination class path.

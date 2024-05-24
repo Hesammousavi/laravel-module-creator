@@ -16,13 +16,13 @@ use Symfony\Component\Console\Input\InputArgument;
 class MakeModuleRepo extends GeneratorCommand
 {
     use RequireModule;
-    
+
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'module:make:repo';
+    protected $name = 'm:make:repo';
 
     /**
      * The name of the console command.
@@ -33,7 +33,7 @@ class MakeModuleRepo extends GeneratorCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:repo';
+    protected static $defaultName = 'm:make:repo';
 
 
     /**
@@ -54,7 +54,7 @@ class MakeModuleRepo extends GeneratorCommand
 
         return base_path("modules/{$this->argument('module')}/src/Database/Repo") . '/' . str_replace('\\', '/', $name) . '.php';
     }
-    
+
     protected function rootNamespace()
     {
         return str_replace('/', '\\', $this->argument('module')) . '\Database\Repo';

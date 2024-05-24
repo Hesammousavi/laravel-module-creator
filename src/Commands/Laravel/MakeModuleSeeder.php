@@ -19,7 +19,7 @@ class MakeModuleSeeder extends SeederMakeCommand
      *
      * @var string
      */
-    protected $name = 'module:make:seeder';
+    protected $name = 'm:make:seeder';
 
     /**
      * The name of the console command.
@@ -30,7 +30,7 @@ class MakeModuleSeeder extends SeederMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:seeder';
+    protected static $defaultName = 'm:make:seeder';
 
 
     /**

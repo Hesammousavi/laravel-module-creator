@@ -14,7 +14,7 @@ class MakeModule extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'module:make {name}';
+    protected $signature = 'm:make {name}';
 
     /**
      * The console command description.

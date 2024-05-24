@@ -3,25 +3,20 @@
 namespace Hesammousavi\LaravelModuleCreator\Commands\Laravel;
 
 use Hesammousavi\LaravelModuleCreator\Traits\RequireModule;
-use Illuminate\Database\Console\Migrations\TableGuesser;
-use Illuminate\Database\Console\Seeds\SeederMakeCommand;
-use Illuminate\Database\Migrations\MigrationCreator;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Console\EventMakeCommand;
-use Illuminate\Foundation\Console\ExceptionMakeCommand;
-use Illuminate\Foundation\Console\ModelMakeCommand;
+use Illuminate\Foundation\Console\ResourceMakeCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputArgument;
 
-class MakeModuleException extends ExceptionMakeCommand
+class MakeModuleResource extends ResourceMakeCommand
 {
     use RequireModule;
+
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'm:make:exception';
+    protected $name = 'm:make:resource';
 
     /**
      * The name of the console command.
@@ -32,7 +27,7 @@ class MakeModuleException extends ExceptionMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'm:make:exception';
+    protected static $defaultName = 'm:make:resource';
 
 
     /**
@@ -40,7 +35,7 @@ class MakeModuleException extends ExceptionMakeCommand
      *
      * @var string
      */
-    protected $description = 'Create a new Exception class for module';
+    protected $description = 'Create a new resource class for module';
 
     /**
      * Get the destination class path.
@@ -60,6 +55,7 @@ class MakeModuleException extends ExceptionMakeCommand
     {
         return str_replace('/', '\\', $this->argument('module'));
     }
+
 
     /**
      * Get the console command arguments.

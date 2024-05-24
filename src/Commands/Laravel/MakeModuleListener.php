@@ -20,7 +20,7 @@ class MakeModuleListener extends ListenerMakeCommand
      *
      * @var string
      */
-    protected $name = 'module:make:listener';
+    protected $name = 'm:make:listener';
 
     /**
      * The name of the console command.
@@ -31,7 +31,7 @@ class MakeModuleListener extends ListenerMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:listener';
+    protected static $defaultName = 'm:make:listener';
 
 
     /**

@@ -16,7 +16,7 @@ class MakeModuleRule extends RuleMakeCommand
      *
      * @var string
      */
-    protected $name = 'module:make:rule';
+    protected $name = 'm:make:rule';
 
     /**
      * The name of the console command.
@@ -27,7 +27,7 @@ class MakeModuleRule extends RuleMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:rule';
+    protected static $defaultName = 'm:make:rule';
 
 
     /**

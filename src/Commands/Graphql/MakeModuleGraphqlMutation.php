@@ -18,7 +18,7 @@ class MakeModuleGraphqlMutation extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'module:make:graphql-mutation';
+    protected $name = 'm:make:graphql-mutation';
 
     /**
      * The name of the console command.
@@ -29,7 +29,7 @@ class MakeModuleGraphqlMutation extends GeneratorCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:graphql-mutation';
+    protected static $defaultName = 'm:make:graphql-mutation';
 
 
     /**

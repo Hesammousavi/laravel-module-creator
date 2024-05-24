@@ -21,7 +21,7 @@ class MakeModuleModel extends ModelMakeCommand
      *
      * @var string
      */
-    protected $name = 'module:make:model';
+    protected $name = 'm:make:model';
 
     /**
      * The name of the console command.
@@ -32,7 +32,7 @@ class MakeModuleModel extends ModelMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:model';
+    protected static $defaultName = 'm:make:model';
 
 
     /**

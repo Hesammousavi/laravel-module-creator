@@ -19,7 +19,7 @@ class MakeModuleGraphqlQuery extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'module:make:graphql-query';
+    protected $name = 'm:make:graphql-query';
 
     /**
      * The name of the console command.
@@ -30,7 +30,7 @@ class MakeModuleGraphqlQuery extends GeneratorCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:graphql-query';
+    protected static $defaultName = 'm:make:graphql-query';
 
 
     /**

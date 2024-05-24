@@ -1,7 +1,8 @@
 Laravel package for Create Laravel Modules from a template
 
 # Requirements
-Laravel 9 and PHP 8.0
+Laravel 9 or later
+PHP 8.0 or later
 
 # Install
 
@@ -15,7 +16,7 @@ composer require hesammousavi/laravel-module-creator
 first you must create your module
 
 ```bash
-php artisan module:make Roocket/User
+php artisan m:make Roocket/User
 ```
 
 finally, run this code :
@@ -27,7 +28,7 @@ composer update
 beautifully done
 
 
-# Your Module Commands 
+# Your Module Commands
 
 you have different commands to do anything with your module
 ```bash
@@ -38,24 +39,26 @@ you can see these commands for your usage
 
 ```
  module
-  module:make                   create a new module to develop project
-  module:make:controller        Create a new controller class for module
-  module:make:graphql-mutation  Create a new Graphql Mutation class for the module
-  module:make:graphql-query     Create a new Graphql Query class for the module
-  module:make:graphql-type      Create a new Graphql Type class for the module
-  module:make:migration         Create a new migration file for the module
-  module:make:model             Create a new Eloquent model class for module
-  module:make:repo              Create a new repo class for the module
-  module:make:seeder            Create a new Seeder class for module
-  module:make:rule              Create a new Rule Validation class for module
-  module:make:event             Create a new Event class for the module
-  module:make:listener            Create a new Listener class for module
+  m:make                   create a new module to develop project
+  m:make:controller        Create a new controller class
+  m:make:request           Create a new request class
+  m:make:resource          Create a new resource class
+  m:make:graphql-mutation  Create a new Graphql Mutation class
+  m:make:graphql-query     Create a new Graphql Query class
+  m:make:graphql-type      Create a new Graphql Type class
+  m:make:migration         Create a new migration file
+  m:make:model             Create a new Eloquent model class
+  m:make:repo              Create a new repo class
+  m:make:seeder            Create a new Seeder class
+  m:make:rule              Create a new Rule Validation class
+  m:make:event             Create a new Event class
+  m:make:listener          Create a new Listener class
 ```
 
 
 you can build model for your module like
 
 ```bash
-php artisan module:make:model <module-namespace> <model-name>
-php artisan module:make:model Roocket/user User  
+php artisan m:make:model <module-namespace> <model-name>
+php artisan m:make:model Roocket/user User
 ```

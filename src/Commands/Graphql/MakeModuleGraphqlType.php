@@ -18,7 +18,7 @@ class MakeModuleGraphqlType extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'module:make:graphql-type';
+    protected $name = 'm:make:graphql-type';
 
     /**
      * The name of the console command.
@@ -29,7 +29,7 @@ class MakeModuleGraphqlType extends GeneratorCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:graphql-type';
+    protected static $defaultName = 'm:make:graphql-type';
 
 
     /**

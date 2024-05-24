@@ -21,7 +21,7 @@ class MakeModuleNotification extends NotificationMakeCommand
      *
      * @var string
      */
-    protected $name = 'module:make:notification';
+    protected $name = 'm:make:notification';
 
     /**
      * The name of the console command.
@@ -32,7 +32,7 @@ class MakeModuleNotification extends NotificationMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:notification';
+    protected static $defaultName = 'm:make:notification';
 
 
     /**

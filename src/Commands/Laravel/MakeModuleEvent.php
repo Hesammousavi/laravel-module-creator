@@ -20,7 +20,7 @@ class MakeModuleEvent extends EventMakeCommand
      *
      * @var string
      */
-    protected $name = 'module:make:event';
+    protected $name = 'm:make:event';
 
     /**
      * The name of the console command.
@@ -31,7 +31,7 @@ class MakeModuleEvent extends EventMakeCommand
      *
      * @deprecated
      */
-    protected static $defaultName = 'module:make:event';
+    protected static $defaultName = 'm:make:event';
 
 
     /**
